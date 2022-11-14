@@ -13,37 +13,34 @@
     grid-template-rows: repeat(3, 1fr);
 }
 
-.columnA {
-    grid-column: 1 / 2;
-    grid-row: 1 / span 3;
+.board-unit {
+    position: relative;
+    border: 2px solid black;
+    cursor: pointer;
 }
 
-.columnB {
-    grid-column: 2 / 3;
-    grid-row: 1 / span 3;
+.board-unit:nth-child(1),
+.board-unit:nth-child(4),
+.board-unit:nth-child(7) {
+    border-left: none;
 }
 
-.columnC {
-    grid-column: 3 / 4;
-    grid-row: 1 / span 3;
+.board-unit:nth-child(1),
+.board-unit:nth-child(2),
+.board-unit:nth-child(3) {
+    border-top: none;
 }
 
-.columnA, .columnB {
-    border-right: 2px solid black;
+.board-unit:nth-child(3),
+.board-unit:nth-child(6),
+.board-unit:nth-child(9) {
+    border-right: none;
 }
 
-.row1, .row2 {
-    border-bottom: 2px solid black;
+.board-unit:nth-child(7),
+.board-unit:nth-child(8),
+.board-unit:nth-child(9) {
+    border-bottom: none;
 }
 
-.row1 {
-    grid-area: 1 / 1 / 2 / span 3; 
-}
 
-.row2 {
-    grid-area: 2 / 1 / 3 / span 3;
-}
-
-.row3 {
-    grid-area: 3 / 1 / 4 /span 3;
-}
