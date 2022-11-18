@@ -4,33 +4,26 @@
 
 :root {
     --unit-size: 9rem;
-    --mark-size: calc(var(--unit-size) * .9);
 }
 
 body {
-    margin: 2rem;
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 .main-container {
-    margin: 0;
     height: 80vh;
-    width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid salmon;
 }
 
 .game-container {
-    height: 350px;
+    height: 370px;
     margin: 80px;
     display: grid;
     grid-template-columns: repeat(3, auto);
-    
 }
 
 .restart {
@@ -47,15 +40,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 
 .board-unit.x,
 .board-unit.circle {
     cursor:not-allowed;
 }
-
-
 
 .board-unit:nth-child(1),
 .board-unit:nth-child(4),
@@ -117,11 +107,10 @@ body {
 }
 
 .win, 
-.lose,
 .draw {
     font-family: 'Courier New', Courier, monospace;
     font-size: 12rem;
-    position: absolute;
+    position: fixed;
     color: lightpink;
     background-color: grey;
     opacity: .7;
@@ -129,7 +118,6 @@ body {
 }
 
 .win.active, 
-.lost.active,
 .draw.active {
     scale: 1;
 }
