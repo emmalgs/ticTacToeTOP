@@ -8,23 +8,29 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    margin: 2rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .main-container {
-    height: 100vh;
+    margin: 0;
+    height: 80vh;
+    width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 2px solid salmon;
 }
 
 .game-container {
-    height: 50vh;
+    height: 350px;
     margin: 80px;
     display: grid;
     grid-template-columns: repeat(3, auto);
+    
 }
 
 .restart {
@@ -108,4 +114,22 @@ body {
 
 .game-container.circle .board-unit:not(.x):not(.circle):hover {
     cursor: url(./images/radiobox-blank.png), pointer;
+}
+
+.win, 
+.lose,
+.draw {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12rem;
+    position: absolute;
+    color: lightpink;
+    background-color: grey;
+    opacity: .7;
+    scale: 0;
+}
+
+.win.active, 
+.lost.active,
+.draw.active {
+    scale: 1;
 }
