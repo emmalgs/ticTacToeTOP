@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 *, *::after, *::before {
     box-sizing: border-box;
 }
 
 :root {
     --unit-size: 9rem;
+    --markers: 'Permanent Marker', sans-serif;
 }
 
 body {
@@ -87,13 +89,13 @@ body {
 }
 
 .board-unit.x::after {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--markers);
     content: 'X';
     font-size: 3rem;
 }
 
 .board-unit.board-unit.circle::after {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--markers);
     content: 'O';
     font-size: 3rem;
 }
